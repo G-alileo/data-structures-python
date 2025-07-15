@@ -8,9 +8,15 @@ def linear_search(array, target):
             return index
     return -1
 
-array = [10, 20, 30, 40, 50]
-target = int(input("Enter the Target value [10,20,30,40,50] : "))
 
+# Taking user array input
+user_array = input("Enter an array of numbers separated by spaces: ")
+array = list(map(int, user_array.split()))
+
+# Getting target value
+target = int(input("Enter the Target value : "))
+
+# Calling linear search function 
 result = int(linear_search(array, target))
 
 if result == -1:
